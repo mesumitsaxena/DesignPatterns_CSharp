@@ -12,7 +12,8 @@ namespace DesignPatterns_CSharp.Creational.Singleton
     // by this method we expose the instance of the class to external world.
     internal class Singleton_Normal
     {
-        // static instance reference which can be accessed within class
+        // static instance reference which can be accessed within class, if we make it public, outside world
+        // can directly access this instance and modify the instance (create a new instance and store it in this reference)
         private static Singleton_Normal instance = null;
         //Restricting class to create instances
         private Singleton_Normal()

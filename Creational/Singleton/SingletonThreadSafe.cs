@@ -8,8 +8,6 @@ namespace DesignPatterns_CSharp.Creational.Singleton
 {
     internal class SingletonThreadSafe
     {
-        //we are using async keyword, by which each thread will come in this method one by one, so there will no
-        // issue with thread creating multiple objects
         // static instance reference which can be accessed within class
         private static SingletonThreadSafe instance = null;
         //Restricting class to create instances
@@ -17,7 +15,8 @@ namespace DesignPatterns_CSharp.Creational.Singleton
         {
 
         }
-
+        //we are using async keyword, by which each thread will come in this method one by one, so there will no
+        // issue with thread creating multiple objects
         public async static Task<SingletonThreadSafe> getInstance()
         {
             // for the first instance, if it is null, create a new instance

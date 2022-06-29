@@ -25,8 +25,8 @@ namespace DesignPatterns_CSharp.Creational.Singleton
             return instance;
         }
     }
-    //Issue with this is, if two thread T1 and T2 reach to line number 17 (instance==null) they will both get into the code block
+    // Issue with this is, if two thread T1 and T2 reach to line number 17 (instance==null) they will both get into the code block
     // and suppose T1 took a lock and created an instance, T2 was waiting outside, when T1 is finished T2 will also take a lock and create an another object
     // which will break our principle.
-    // Solution is double check lock
+    // Solution is double check lock.
 }
