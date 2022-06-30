@@ -28,6 +28,7 @@ From above code, are you able to figure out marks of which subject? Do you know 
 So above way has below cons:
 -	*Unreadable Code:* while reading the code are you able to figure out parameter values?
 -	*Prone to Errors:* While passing the marks, it is possible that we can pass hindi marks in science or vice versa because we don’t know from constructor what to pass?
+
 Also, suppose we want to only create an object with English marks or English and Maths marks or any other combination, what can we do?
  We can create constructor overloading right?
 Example: 
@@ -36,6 +37,7 @@ Example:
 -	UserExam(int eng);
 -	UserExam(int end, int hindi)
 -	UserExam(int maths, science, int hindi) etc..
+
 Some implementation if above methods would be-
 ```
 UserExam{
