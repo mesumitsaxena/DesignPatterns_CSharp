@@ -374,3 +374,5 @@ void Main() {
 So we can see, we are not creating toy from ToyCreater class, instead we have deligated the tasks to ToyBuilders, they will set the head value, legs value etc.
 
 If we don’t use Builder, then in Toy creater we will have to pass all the values in constructor of the toy creator class or in Create Toy method, which results in error probing or unreadable code or Telescoping Constructor
+
+Also from our original defination as well, Toy Builder class have all those attribute or methods which Toy class has.
