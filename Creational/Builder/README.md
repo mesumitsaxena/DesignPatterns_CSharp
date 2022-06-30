@@ -169,9 +169,11 @@ Right now userExamParameter class is only providing the data to userExam, what i
 -	Have all the attribute of userExam.
 -	Validate the attribute of userExam
 -	Create an object of userExam.
+
 If userExamParameter is able to fulfill above activities, then we can say userExamParameter class is fully equipped to create an object of userExam and if userExamParameter is building userExam, the userExamParameter is a builder class, so we can say it is userExamBuilder.
 Also, Suppose UserExam class is immutable, means we can set the values of UserExam outside world, Also we can’t create an object of userExam, then how will be get the instance and set the values of userExam.
 Answer is using userExambuilder.
+
 Below is the code:
 ```
 internal class UserExam
