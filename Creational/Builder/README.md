@@ -1,9 +1,11 @@
 ## Builder Design Pattern
 Builder Design pattern is a creational design pattern in which builder class is creating an object of other class due to excessive parameters, validation of parameters or having immutable objects.
-*When to use Builder Design Pattern:*
+
+**When to use Builder Design Pattern:**
 -	When we have many attributes  or
 -	When we have to validate the attributes before creating the object or
 -	Immutable objects
+
 *Requirement:*
 -	Suppose we have many attributes and parameters in the class.
 -	Before creating the object, we want to validate those attributes.
