@@ -6,12 +6,13 @@ Builder Design pattern is a creational design pattern in which builder class is 
 -	When we have to validate the attributes before creating the object or
 -	Immutable objects
 
-*Requirement:*
+**Requirement:**
 -	Suppose we have many attributes and parameters in the class.
 -	Before creating the object, we want to validate those attributes.
 
-*Lets understand how a class will look like if we have many parameters:*
+**Lets understand how a class will look like if we have many parameters:**
 Suppose we have an user exam class, we would be having many attributes, like science marks,  hindi marks, English marks, maths marks etc.
+
 ```
 Class UserExam{
 	Int Science;
@@ -25,7 +26,7 @@ Suppose we create an object like below-
 ```
 UserExam userExam= new UserExam(70,80,60,76);
 ```
-*Issue with above approach:*
+**Issue with above approach:**
 From above code, are you able to figure out marks of which subject? Do you know 70 are English marks or hindi marks? No
 So above way has below cons:
 -	*Unreadable Code:* while reading the code are you able to figure out parameter values?
@@ -53,12 +54,16 @@ UserExam{
 	}
 }
 ```
-In the above constructor UserExam(int maths, int English, int science) we used this(maths,English), this is called *Telescoping Constructor(Constructor which is internally calling another constructor)*
-*Issue with above method:*
+In the above constructor UserExam(int maths, int English, int science) we used this(maths,English), this is called **Telescoping Constructor(Constructor which is internally calling another constructor)**
+
+**Issue with above method:**
+
 -	Telescoping Constructor- They are anti pattern and not recommended
 -	Because of multiple constructor, we might not be able to call correct constructor because of signature match. Example: if we want to call UserExam(10,30), how do you know which constructor is called? Is it UserExam(int maths, int science) or UserExam(int end, int hindi).
 -	Still Unreadable code
-*Another Approach (Hashmap):*
+-	
+**Another Approach (Hashmap):**
+
 Suppose we create a constructor with map with string and int like below-
 ```
 UserExam(Map<string,int> Parameters)
@@ -82,7 +87,7 @@ So by this we will be able to create the object without any ambiguity.
 *Another Approach:*
 So map is not working, think of something which works like a Map. Which allows you to have multiple values and each value can be of multiple types and can be identified via its name. Answer is class.
 
-Ans is *Class*
+Ans is **Class**
 So in class we can have multiple parameters of different types and its object can have multiple values. We can say it’s a parameter class.
  
 ```
