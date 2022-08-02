@@ -14,7 +14,7 @@ Class BirdSanctuary{
 }
 ```
 **Issue with above Approach:**
-- We might have different birds, like sparrow, crows etc. Considering all birds with only one class Bird and maintain all code within that will break SRP principal. 
+- We might have different birds, like sparrow, crows etc. Considering all birds with only one class Bird and maintain all code within that will break SRP(Single Responsibility principal). 
 - So, above method might not work, and we will have to create multiple subclasses.
 ## Approach 1 :
 Considering we will create multiple subclasses and make Bird an abstract class
@@ -38,7 +38,7 @@ Class Sparrow extends Bird{
 ```
 
 We might have same bird’s (Crow or Sparrow) objects but with different properties like, we can have 5 crows or 6 sparrows in our bird sanctuary but those crows might have same or different attribute values.
-Example: 1st crow might be named as Indian Cow, 2nd might be African Crow or their color might be different, like 1st crow is dark brown or 2nd crow might be full black.
+Example: 1st crow might be named as Indian Crow, 2nd might be African Crow or their color might be different, like 1st crow is dark brown or 2nd crow might be full black.
 Suppose we have to create 100 objects of sparrows, then creating 100 objects and set their attributes manually can be a tedious task. As we know in sparrow might be have almost same attribute values like legs, wings length etc, we can create one object and their create 99 copies/clone of that object and change attribute values if required. By this we are only changing few of attribute values of sparrows, which is better than creating and setting each value from scratch.
 So, what we can do here is we can create a bird class (abstract or interface) and then create multiple subclasses as Crow, Sparrow, Penguin etc. 
 Let’s understand if we don’t follow prototype DP, how a code would look like for Bird Sanctuary-
