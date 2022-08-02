@@ -66,7 +66,7 @@ List<Bird> CreateBird(List<Bird> original){
 **Issue with above approach:**
 -	It is violating SRP. Creating a copy of bird having responsibility of multiple and different bird is not single responsibility.
 -	It is violating Open/Closed Principal – in order to add/update or delete any bird, we will need to modify the bird sanctuary class. 
--	** There might be few private properties which can be exposed to outside world will not get copied and cloning of the object will not happen correctly**
+-	**There might be few private properties which can not be exposed to outside world will not get copied and cloning of the object will not happen correctly**
 
 ## Approach 2 :
 Instead giving responsibility to create a clone to Bird Sanctuary, best place to make a replica is their own object.
