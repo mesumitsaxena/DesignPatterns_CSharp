@@ -115,6 +115,20 @@ From this method, check if(instance==null) twice, so that after lock if T1 creat
 ![image](https://user-images.githubusercontent.com/83850703/176431659-ec4ff288-0810-46ee-b2fb-2409c2660c3f.png)
 
 
+## Singleton Vs Static
+
+- Singleton mostly loaded/ created the object Lazily.
+- Lazy Initialization means it initialized at the last possible moment of the time.
+- Static classes are loaded automatically by CLR when program starts
+- So with static class we cannot change the behavior of the class once it is loaded.
+- Singleton is a Design Pattern whereas Static is the keyword, Static Classes can only contain Static Methods whereas Singleton Classes can contain both static or
+non-static methods.
+- Singleton can implement Interfaces, Inherit from Other classes but cannot allow further inheritance.
+- Singleton objects can be passed as a reference.
+- Mostly Static Keywords or classes are used when we want to provide some common and constant functionality whereas Singleton is a pattern by which we can achieve functionality of static and other features like normal classes as well.
+
+
+
 
 
 
